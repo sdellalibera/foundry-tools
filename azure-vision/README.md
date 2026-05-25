@@ -19,15 +19,7 @@ Azure AI Vision (Image Analysis 4.0) provides a rich set of AI algorithms for pr
 
 ## Setup
 
-### 1. Install dependencies
-
-From the repo root, activate your virtual environment and install:
-
-```bash
-pip install -r azure-vision/requirements.txt
-```
-
-### 2. Environment variables
+### 1. Environment variables
 
 Ensure your `.env` file (copied from `.env.sample` at the repo root) contains:
 

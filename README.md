@@ -1,6 +1,6 @@
 # Azure AI Foundry Tools — Demos
 
-Code samples for working with **Azure AI Foundry** tools using Python and Jupyter notebooks. Each service folder is self-contained and includes its own setup instructions and numbered notebooks.
+Code samples for working with **Microsoft Foundry** tools using Python and Jupyter notebooks. Each service folder is self-contained and includes its own setup instructions and numbered notebooks.
 
 | Folder | Service |
 |--------|---------|
@@ -19,30 +19,32 @@ Code samples for working with **Azure AI Foundry** tools using Python and Jupyte
 
 ## Quick Start
 
-### 1. Create a virtual environment
+Set up once at the repo root — a single virtual environment and Jupyter kernel will work for **every** notebook in every service folder.
 
-From the repo root:
-
-**Bash (macOS/Linux):**
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r <service-folder>/requirements.txt
-python -m ipykernel install --user --name foundry-tools-py --display-name "Python (foundry-tools)"
-```
+### 1. Create a virtual environment and install dependencies
 
 **PowerShell (Windows):**
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-pip install -r <service-folder>\requirements.txt
+pip install -r requirements.txt
+python -m ipykernel install --user --name foundry-tools-py --display-name "Python (foundry-tools)"
+```
+
+**Bash (macOS/Linux):**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 python -m ipykernel install --user --name foundry-tools-py --display-name "Python (foundry-tools)"
 ```
 
 > If you get an execution-policy error on Windows, run this once first:
 > `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned`
+
+The `ipykernel install` step registers a kernel named **Python (foundry-tools)** that points at the `.venv` you just created. Every notebook in this repo is already configured to use that kernel name, so they will work in VS Code, JupyterLab, classic Jupyter Notebook, or any other Jupyter-compatible environment without further setup.
 
 ### 2. Configure environment variables
 
@@ -55,9 +57,9 @@ cp .env.sample .env
 
 Each notebook calls `load_dotenv(find_dotenv())` in its setup cell, which locates and loads `.env` from the repo root automatically.
 
-### 3. Select the kernel in VS Code
+### 3. Select the kernel
 
-Open any notebook, click the kernel picker in the top-right, and choose **Python (foundry-tools)**. If you skipped the `ipykernel install` step, pick **Python Environments → .venv** instead.
+Open any notebook, click the kernel picker (top-right in VS Code, top-right in JupyterLab) and choose **Python (foundry-tools)**.
 
 ## Authentication
 

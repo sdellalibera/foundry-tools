@@ -20,20 +20,7 @@ Azure AI Speech is a managed service offering:
 
 ## Setup
 
-### 1. Install dependencies
-
-From the repo root, activate your virtual environment and install:
-
-```bash
-pip install -r azure-speech/requirements.txt
-```
-
-> On Linux you may also need:
-> ```bash
-> sudo apt-get install -y libssl-dev libasound2-dev
-> ```
-
-### 2. Environment variables
+### 1. Environment variables
 
 Ensure your `.env` file (copied from `.env.sample` at the repo root) contains:
 

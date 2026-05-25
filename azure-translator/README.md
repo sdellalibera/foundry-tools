@@ -19,15 +19,7 @@ Azure AI Translator is a cloud-based neural machine translation service that sup
 
 ## Setup
 
-### 1. Install dependencies
-
-From the repo root, activate your virtual environment and install:
-
-```bash
-pip install -r azure-translator/requirements.txt
-```
-
-### 2. Environment variables
+### 1. Environment variables
 
 Ensure your `.env` file (copied from `.env.sample` at the repo root) contains:
 
