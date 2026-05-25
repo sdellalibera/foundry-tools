@@ -1,0 +1,5 @@
+azure-ai-projects>=1.0.0b8
+azure-identity>=1.17.0,<2.0.0
+python-dotenv>=1.0.0,<2.0.0
+ipykernel>=6.29.0
+requests>=2.31.0
