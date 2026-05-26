@@ -63,7 +63,7 @@ Open any notebook, click the kernel picker (top-right in VS Code, top-right in J
 
 ## Authentication
 
-Notebooks that use `DefaultAzureCredential` pick up your active `az login` session automatically (no API key required). Notebooks for services that only support key-based auth (Translator, Speech, Vision, Language) read their keys from the `.env` file.
+Only the **Content Understanding** notebooks use `DefaultAzureCredential` (picks up your active `az login` session — no API key required). All other services (Translator, Speech, Vision, Language) authenticate with the `AZURE_AI_KEY` from your `.env` file.
 
 ## Service Samples
 
