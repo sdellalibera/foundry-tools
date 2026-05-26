@@ -29,7 +29,6 @@ Set up once at the repo root — a single virtual environment and Jupyter kernel
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python -m ipykernel install --user --name foundry-tools-py --display-name "Python (foundry-tools)"
 ```
 
 **Bash (macOS/Linux):**
@@ -38,7 +37,6 @@ python -m ipykernel install --user --name foundry-tools-py --display-name "Pytho
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python -m ipykernel install --user --name foundry-tools-py --display-name "Python (foundry-tools)"
 ```
 
 > If you get an execution-policy error on Windows, run this once first:
