@@ -19,7 +19,7 @@ Code samples for working with **Microsoft Foundry** tools using Python and Jupyt
 
 ## Quick Start
 
-Set up once at the repo root — a single virtual environment and Jupyter kernel will work for **every** notebook in every service folder.
+Set up once at the repo root — a single virtual environment is enough for installs, tests, and running notebooks across every service folder.
 
 ### 1. Create a virtual environment and install dependencies
 
@@ -42,8 +42,6 @@ pip install -r requirements.txt
 > If you get an execution-policy error on Windows, run this once first:
 > `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned`
 
-The `ipykernel install` step registers a kernel named **Python (foundry-tools)** that points at the `.venv` you just created. Every notebook in this repo is already configured to use that kernel name, so they will work in VS Code, JupyterLab, classic Jupyter Notebook, or any other Jupyter-compatible environment without further setup.
-
 ### 2. Configure environment variables
 
 Copy the sample env file and fill in your values:
@@ -57,11 +55,11 @@ Each notebook calls `load_dotenv(find_dotenv())` in its setup cell, which locate
 
 ### 3. Select the kernel
 
-Open any notebook, click the kernel picker (top-right in VS Code, top-right in JupyterLab) and choose **Python (foundry-tools)**.
+Open any notebook, click the kernel picker, and select the Python interpreter from `.venv`.
 
 ## Authentication
 
-Only the **Content Understanding** notebooks use `DefaultAzureCredential` (picks up your active `az login` session — no API key required). All other services (Translator, Speech, Vision, Language) authenticate with the `AZURE_AI_KEY` from your `.env` file.
+Only the **Content Understanding** notebooks use `DefaultAzureCredential` (picks up your active `az login` session — no API key required), and they also require the Content Understanding resource to be linked to Microsoft Foundry in Content Understanding Studio. If Studio prompts you, either create the Foundry resource from that wizard or link an existing Foundry deployment/resource first. All other services (Translator, Speech, Vision, Language) authenticate with the `AZURE_AI_KEY` from your `.env` file.
 
 ## Service Samples
 

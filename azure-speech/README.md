@@ -41,4 +41,4 @@ You can find these values in the Azure Portal under your Speech resource → **K
 
 ## Running the Notebooks
 
-Open any notebook in VS Code, select the **Python (foundry-tools)** kernel, and run cells top to bottom. The first cell in each notebook installs all required packages via `%pip install`.
+Open any notebook in VS Code, select the Python interpreter from `.venv`, and run cells top to bottom. The first cell in each notebook installs all required packages via `%pip install`.

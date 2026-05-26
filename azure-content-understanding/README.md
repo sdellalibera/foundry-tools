@@ -10,6 +10,7 @@ Azure AI Content Understanding is a managed service that lets you define *analyz
 
 - Python 3.9 or later
 - An [Azure AI Services](https://portal.azure.com) resource (Content Understanding is part of the multi-service resource or a dedicated endpoint)
+- A Microsoft Foundry resource linked to Content Understanding. In Content Understanding Studio, use the prompt to either create the Foundry resource from the wizard or link an existing Foundry deployment before running the notebooks.
 - VS Code with the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 
 ## Setup
@@ -24,6 +25,15 @@ AZURE_CONTENT_UNDERSTANDING_ENDPOINT=https://<your-account>.cognitiveservices.az
 
 Authentication uses `DefaultAzureCredential`. Run `az login` once before opening the notebooks.
 
+### 2. Link Content Understanding to Foundry
+
+Before these samples will work, open Content Understanding Studio and make sure the Content Understanding resource is connected to Microsoft Foundry. If prompted, either:
+
+- create the Foundry resource from the Studio wizard, or
+- link an existing Foundry deployment/resource that you created ahead of time.
+
+If this linkage is missing, analyzer creation and analysis calls will not succeed even if your endpoint and authentication are configured correctly.
+
 ## Samples
 
 | Notebook | Description |
@@ -33,4 +43,4 @@ Authentication uses `DefaultAzureCredential`. Run `az login` once before opening
 
 ## Running the Notebooks
 
-Open any notebook in VS Code, select the **Python (foundry-tools)** kernel, and run cells top to bottom. The first cell in each notebook installs all required packages via `%pip install`.
+Open any notebook in VS Code, select the Python interpreter from `.venv`, and run cells top to bottom. The first cell in each notebook installs all required packages via `%pip install`.
