@@ -1,4 +1,4 @@
-# Microsoft Foundry Tools — Demos
+# Microsoft Foundry Tools
 
 Code samples for working with **Microsoft Foundry** tools using Python and Jupyter notebooks. Each service folder is self-contained and includes its own setup instructions and numbered notebooks.
 
